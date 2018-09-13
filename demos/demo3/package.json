@@ -1,0 +1,16 @@
+{
+  "name": "webpack-demo3",
+  "version": "1.0.0",
+  "description": "A demo for 'Webpack Visualizer' and 'stats.json'",
+  "main": "src/index.js",
+  "dependencies": {
+    "stats-webpack-plugin": "^0.7.0",
+    "webpack-visualizer-plugin": "^0.1.11"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {}
+}

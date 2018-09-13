@@ -1,0 +1,11 @@
+{
+  "name": "webpack-demo2",
+  "version": "1.0.0",
+  "description": "A demo for less-loader",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

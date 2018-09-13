@@ -1,0 +1,11 @@
+{
+  "name": "webpack-demo1",
+  "version": "1.0.0",
+  "description": "A demo for __webpack_require__, explains how it works",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
