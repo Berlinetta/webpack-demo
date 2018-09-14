@@ -1,7 +1,7 @@
 {
   "name": "webpack-demo2",
   "version": "1.0.0",
-  "description": "A demo for css/style/less-loader",
+  "description": "A demo for file-loader/url-loader",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,7 +12,8 @@
     "file-loader": "^2.0.0",
     "less-loader": "^4.1.0",
     "mini-css-extract-plugin": "^0.4.2",
-    "style-loader": "^0.23.0"
+    "style-loader": "^0.23.0",
+    "url-loader": "^1.1.1"
   },
   "author": "",
   "license": "ISC"

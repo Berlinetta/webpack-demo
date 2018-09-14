@@ -85,55 +85,55 @@ module.exports = () => {
         //     "prop-types": "PropTypes"
         // },
         module: {
-            rules: [{
-                test: /\.js$/,
-                include: /src/,
-                use: {
-                    loader: "babel-loader",
-                    options: {
-                        presets: [
-                            ["env", {
-                                "targets": {
-                                    "browsers": ["last 2 versions", "ie 11"]
-                                },
-                                /* when all the mdc packages are using es6 import/export,
-                                   we should open the below setting for webpack to use tree shaking
-                                   while bundling the code */
-                                //"modules": false,
-                                "node": "current",
-                                "useBuiltIns": "usage"
-                            }],
-                            "stage-2",
-                            "react"
-                        ],
-                        "plugins": [
-                            ["transform-runtime", {
-                                "helpers": false,
-                                "polyfill": false,
-                                "regenerator": true
-                            }]
-                        ]
+            rules: [
+                {
+                    test: /\.js$/,
+                    include: /src/,
+                    use: {
+                        loader: "babel-loader",
+                        options: {
+                            presets: [
+                                ["env", {
+                                    "targets": {
+                                        "browsers": ["last 2 versions", "ie 11"]
+                                    },
+                                    /* when all the mdc packages are using es6 import/export,
+                                       we should open the below setting for webpack to use tree shaking
+                                       while bundling the code */
+                                    //"modules": false,
+                                    "node": "current",
+                                    "useBuiltIns": "usage"
+                                }],
+                                "stage-2",
+                                "react"
+                            ],
+                            "plugins": [
+                                ["transform-runtime", {
+                                    "helpers": false,
+                                    "polyfill": false,
+                                    "regenerator": true
+                                }]
+                            ]
+                        }
                     }
-                }
-            }, {
-                test: /\.css/,
-                use: [MiniCssExtractPlugin.loader, 'style-loader', 'css-loader']
-            }, {
-                test: /\.less/,
-                use: [
-                    // {
-                    //     loader: 'file-loader',
-                    //     options: {name: 'mdc-neptune1.css'}
-                    // },
-                    MiniCssExtractPlugin.loader,
-                    // {
-                    //     loader: "extract-loader",
-                    //     options: {
-                    //         publicPath: "./lib",
-                    //     }
-                    // },
-                    'css-loader?modules&importLoaders=1&localIdentName=neptune_[local]_[hash:base64:5]', 'less-loader']
-            }]
+                },
+                {
+                    test: /\.css$/,
+                    use: [MiniCssExtractPlugin.loader, 'style-loader', 'css-loader'],
+                },
+                {
+                    test: /\.less$/,
+                    use: [
+                        MiniCssExtractPlugin.loader,
+                        'css-loader?modules&importLoaders=1&localIdentName=neptune_[local]_[hash:base64:5]', 'less-loader']
+                },
+                {
+                    test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
+                    loader: 'url-loader',
+                    options: {
+                        limit: 10000
+                    }
+                }]
         }
     };
 
