@@ -63,27 +63,9 @@ module.exports = () => {
         resolve: {
             extensions: [".js", ".jsx", ".json"]
         },
-        // externals: {
-        //     "axios": "axios",
-        //     "bluebird": "Promise",
-        //     "es5-shim": "es5-shim",
-        //     "lodash": "_",
-        //     "react": "React",
-        //     "react-dom": "ReactDOM",
-        //     "react-redux": "ReactRedux",
-        //     "redux": "Redux",
-        //     "moment": "moment",
-        //     "mdc-datalayer-manager": "ddManager",
-        //     "mdc-neptune": "mdcNeptune",
-        //     "mdc-neptune-sc": "mdcNeptuneSc",
-        //     "mdc-utils": "MdcUtils",
-        //     "mdc-apisdk": "mdc_apisdk",
-        //     "highcharts": "Highcharts",
-        //     "highcharts/highstock": "Highcharts",
-        //     "d3": "d3",
-        //     "mdc-d3-dagre": "dagreD3",
-        //     "prop-types": "PropTypes"
-        // },
+        externals: {
+            "lodash": "_"
+        },
         module: {
             rules: [
                 {
@@ -94,15 +76,7 @@ module.exports = () => {
                         options: {
                             presets: [
                                 ["env", {
-                                    "targets": {
-                                        "browsers": ["last 2 versions", "ie 11"]
-                                    },
-                                    /* when all the mdc packages are using es6 import/export,
-                                       we should open the below setting for webpack to use tree shaking
-                                       while bundling the code */
-                                    //"modules": false,
-                                    "node": "current",
-                                    "useBuiltIns": "usage"
+                                    "node": "current"
                                 }],
                                 "stage-2",
                                 "react"
