@@ -74,11 +74,11 @@ const getServerConfig = () => {
                     loader: "babel-loader",
                     options: {
                         presets: [
-                            ["env", {
+                            ["@babel/preset-env", {
                                 "node": "current"
                             }],
                             "stage-2",
-                            "react"
+                            "@babel/preset-react"
                         ]
                     }
                 }

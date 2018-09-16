@@ -1,1 +1,0 @@
-const demo = require('./lib/webpack-demo');

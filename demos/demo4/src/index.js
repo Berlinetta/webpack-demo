@@ -12,3 +12,12 @@ printMe();
 console.log(_.isArray([]));
 
 console.log("index.js end.");
+
+export const testA = "testA";
+export const testB = "testB";
+
+
+export default {
+    pm: printMe,
+    ss: stylesLess.highlight
+};
